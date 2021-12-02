@@ -1,18 +1,15 @@
 import React from 'react';
 import AppRoute from "./routes/AppRoute";
-import Header from "./components/Header/Header";
-
+import Header from "./components/Header";
 import st from './assets/styles/app.module.css'
-import SubHeader from "./components/SubHeader/SubHeader";
 
 const App = () => {
   return (
     <div className={st.wrapper}>
-      <div className={st.wrapperHeader}>
-        <SubHeader />
-        <Header/>
+      <div className={st.header}>
+        <Header />
       </div>
-      <div className={st.wrapperContent}>
+      <div className={st.content}>
         <AppRoute/>
       </div>
     </div>

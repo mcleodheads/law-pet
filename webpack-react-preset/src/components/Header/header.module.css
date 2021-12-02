@@ -1,46 +1,115 @@
 .wrapper {
-    background-color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.topHeader {
+    box-shadow: 0 0 5px #4c4c4c;
+    height: 125px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.phoneText {
+    font-size: 20px;
+}
+
+.phone {
+    padding-left: 20px;
+}
+
+.phoneBtn {
+    padding: 16px 24px;
+    border: 3px solid #f6f6f8;
+    border-radius: 10px;
+    background-color: transparent;
+    outline: none;
+    font-size: 14px;
+
+}
+
+.phoneBtn:hover {
+    transition: 0.3s;
+    color: #f9f1de;
+    background-color: rgba(95, 76, 62, .5);
+    box-shadow: 0 0 10px rgba(95, 76, 62, .3);
+}
+
+.bottomHeader {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom: 1px solid #d7d7d7;
-    height: 100px;
+    height: calc(215px - 125px);
 }
 
-.container {
-    width: 85%;
-    height: 100%;
+.topHeaderWrapper{
+    width: 90%;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    border: 1px solid;
-    width: 35%;
+    border: 1px solid black;
+    height: 100%;
+    width: 15%;
+}
+
+.strip {
+    transform: skewX(-32.5deg);
+    background-color: rgba(95, 76, 62, .3);
+    width: 10px;
+    height: 125px;
+}
+
+.contact {
+}
+
+.menu {
+    height: 100%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linksBar {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.linkItem {
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
-    color: #4C4C4C
 }
-
-.navbar {
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-
-.navLink {
-    margin-right: 5%;
-}
-
 
 
 .link {
+    height: 50%;
+    width: 10%;
+    color: #333333;
     text-decoration: none;
-    color: #4C4C4C;
+}
+
+.link:after {
+    display:block;
+    content: '';
+    border-bottom: solid 3px rgba(95, 76, 62, .5);
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+
+.link:hover:after {
+    transform: scaleX(1);
 }
